@@ -1,0 +1,50 @@
+/***********************************
+* Nav section
+*/
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: center-start / center-end;
+
+    padding: rem(50) 0;
+
+    &__logo {
+        width: clamp(10vw, 25vw, rem(90));
+    }
+
+    &__items-box {
+        // add margin to Teams
+        > :nth-last-child(2) {
+            margin: 0 rem(25);
+        }
+    }
+}
+
+/************************************
+* Hero section
+*/
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-column: center-start / center-end;
+    text-align: center;
+
+    &__img {
+        width: clamp(35vw, 100%, rem(500));
+    }
+
+    &__heading {
+        max-width: rem(600);
+        margin: rem(25);
+
+        //font-size: rem(45);
+        line-height: rem(42);
+    }
+
+    &__subheading {
+        max-width: rem(430);
+        margin-bottom: rem(28);
+    }
+}

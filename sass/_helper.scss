@@ -1,0 +1,24 @@
+@function rem($pixels, $context: 14) {
+    @return ($pixels / $context) * 1rem;
+}
+
+/***********************
+* extends
+*/
+%raleway-font {
+    font-family: 'Raleway', sans-serif;
+    color: $color-neutral-1;
+}
+
+.header-nav {
+    @extend %raleway-font;
+}
+
+// for all headings of the page
+.heading-font {
+    @extend %raleway-font;
+}
+
+button {
+    @extend %raleway-font;
+}

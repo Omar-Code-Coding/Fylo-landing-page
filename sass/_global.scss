@@ -1,0 +1,39 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+ 
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+ 
+html {
+    box-sizing: border-box;
+    font-size: clamp(.75rem ,87.5vw, 1rem); // 14px
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $color-neutral-2;
+    background-color: $color-primary-2;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: [margin-start] minmax(rem(20), 4vw) [center-start] repeat(8, [col-start] 1fr [col-end])
+                           [center-end] minmax(rem(20), 4vw) [margin-end];
+}
+
+a {
+    color: $color-neutral-2;
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: 0;
+    border-radius: rem(25);
+    padding: rem(15) rem(70);
+    background: linear-gradient(90deg, rgba(101,226,217,1) 22%, rgba(51,158,204,1) 100%);
+}
