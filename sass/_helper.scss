@@ -15,7 +15,9 @@
 }
 
 // for all headings of the page
-.heading-font {
+h1,
+ h2,
+  h3 {
     @extend %raleway-font;
 }
 

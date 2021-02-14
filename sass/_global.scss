@@ -21,13 +21,14 @@ body {
 
 .wrapper {
     display: grid;
-    grid-template-columns: [margin-start] minmax(rem(20), 4vw) [center-start] repeat(8, [col-start] 1fr [col-end])
-                           [center-end] minmax(rem(20), 4vw) [margin-end];
+    grid-template-columns: [margin-start] minmax(rem(20), 5vw) [center-start] repeat(8, [col-start] 1fr [col-end])
+                           [center-end] minmax(rem(20), 5vw) [margin-end];
+    grid-gap: rem(100) 0;  //row, column
 }
 
 a {
     color: $color-neutral-2;
-    text-decoration: none;
+    text-decoration-line: none;
 }
 
 button {
@@ -35,5 +36,7 @@ button {
     border: 0;
     border-radius: rem(25);
     padding: rem(15) rem(70);
+
+    font-weight: 700;
     background: linear-gradient(90deg, rgba(101,226,217,1) 22%, rgba(51,158,204,1) 100%);
 }

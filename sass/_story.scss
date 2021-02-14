@@ -1,0 +1,47 @@
+.stay-productive-img {
+    width: 100%;
+    grid-column: center-start / col-end 4;
+}
+
+.stay-productive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    grid-column: col-start 5 / center-end;
+
+    // To match up the design
+    max-width: rem(500);
+
+    // set a space between Image and text
+    margin-left: 4vw;
+
+    &__heading {
+        padding-right: rem(250);
+    }
+    
+    &__sub-heading1 {
+        margin: rem(25) 0 rem(10) 0;
+    }
+
+    &__sub-heading2 {
+        margin: rem(10) 0 rem(22) 0;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: rem(148);
+        padding-bottom: rem(3);
+
+        //arrow icon
+        > img {
+            width: rem(14);
+            height: rem(14);
+        }
+
+        &:hover {
+            border-bottom: rem(1) solid $color-neutral-1;
+        }
+    }
+}

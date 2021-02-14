@@ -1,3 +1,7 @@
+header {
+    grid-column: center-start / center-end;
+}
+
 /***********************************
 * Nav section
 */
@@ -5,8 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-column: center-start / center-end;
-
     padding: rem(50) 0;
 
     &__logo {
@@ -28,7 +30,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    grid-column: center-start / center-end;
     text-align: center;
 
     &__img {
@@ -37,7 +38,7 @@
 
     &__heading {
         max-width: rem(600);
-        margin: rem(25);
+        margin: rem(25) 0;
 
         //font-size: rem(45);
         line-height: rem(42);
