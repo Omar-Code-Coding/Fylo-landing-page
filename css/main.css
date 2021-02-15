@@ -122,3 +122,27 @@ header {
       height: 1rem; }
     .stay-productive__link:hover {
       border-bottom: 0.07143rem solid white; }
+
+.review {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column: center-start / center-end;
+  grid-gap: 0 2vw; }
+  .review__item {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 27.14286rem;
+    padding: 2.85714rem 2.5rem 2rem 2rem;
+    border-radius: 0.35714rem;
+    background-color: #202a3c; }
+  .review__img {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 2rem;
+    border-radius: 50%; }
+  .review__profile {
+    margin: 2rem 0 0 0.57143rem; }
+  .review__name {
+    color: white; }
+  .review__title {
+    font-weight: 400; }
