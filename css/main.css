@@ -39,6 +39,7 @@ button {
   border-radius: 1.78571rem;
   padding: 1.07143rem 5rem;
   font-weight: 700;
+  cursor: pointer;
   background: linear-gradient(90deg, #65e2d9 22%, #339ecc 100%); }
 
 header {
