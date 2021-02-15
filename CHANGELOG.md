@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Omar-Code-Coding/Fylo-landing-page/compare/v1.2.0-alpha.0...v1.2.0) (2021-02-15)
+
+
+### Features
+
+* change cursor to pointer for button ([00c64c8](https://github.com/Omar-Code-Coding/Fylo-landing-page/commit/00c64c807c50b4bc8e7cef26066e8ccd22c08dfd))
+
 ## [1.2.0-alpha.0](https://github.com/Omar-Code-Coding/Fylo-landing-page/compare/v1.1.1...v1.2.0-alpha.0) (2021-02-15)
 
 
