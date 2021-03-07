@@ -17,33 +17,42 @@ h3, button {
 
 html {
   box-sizing: border-box;
-  font-size: clamp(0.75rem, 87.5vw, 1rem); }
+  font-size: .875rem; }
 
 body {
   font-family: 'Open Sans', sans-serif;
   color: #d6d6d6;
   background-color: #181f2a; }
+  body > :not(:first-child) {
+    margin: 10vh 0; }
+  body > :nth-child(7), body :nth-child(8) {
+    margin: 0; }
 
 .wrapper {
   display: grid;
-  grid-template-columns: [margin-start] minmax(1.42857rem, 5vw) [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(1.42857rem, 5vw) [margin-end];
-  grid-gap: 7.14286rem 0; }
+  grid-template-columns: [margin-start] 5rem [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end] 5rem [margin-end];
+  grid-gap: 0 1.42857rem;
+  justify-items: center; }
 
 a {
   color: #d6d6d6;
-  text-decoration-line: none; }
+  text-decoration-line: none;
+  cursor: pointer; }
+  a:hover {
+    color: white;
+    font-weight: 700; }
 
 button {
   outline: none;
   border: 0;
-  border-radius: 1.78571rem;
+  border-radius: 3.57143rem;
   padding: 1.07143rem 5rem;
   font-weight: 700;
   cursor: pointer;
   background: linear-gradient(90deg, #65e2d9 22%, #339ecc 100%); }
 
-header {
-  grid-column: center-start / center-end; }
+ul {
+  list-style: none; }
 
 /***********************************
 * Nav section
@@ -52,6 +61,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-column: center-start / center-end;
+  justify-self: stretch;
   padding: 3.57143rem 0; }
   .header-nav__logo {
     width: clamp(10vw, 25vw, 6.42857rem); }
@@ -65,6 +76,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  grid-column: center-start / center-end;
   text-align: center; }
   .hero__img {
     width: clamp(35vw, 100%, 35.71429rem); }
@@ -97,13 +109,13 @@ header {
 
 .stay-productive-img {
   width: 100%;
-  grid-column: center-start / col-end 4; }
+  grid-column: center-start / col-end 6; }
 
 .stay-productive {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-column: col-start 5 / center-end;
+  grid-column: col-start 7 / center-end;
   max-width: 35.71429rem;
   margin-left: 4vw; }
   .stay-productive__heading {
@@ -125,17 +137,20 @@ header {
       border-bottom: 0.07143rem solid white; }
 
 .review {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-column: center-start / center-end;
-  grid-gap: 0 2vw; }
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  grid-column: center-start / center-end; }
   .review__item {
     display: flex;
     flex-wrap: wrap;
-    max-width: 27.14286rem;
+    z-index: 1;
+    max-width: 21.42857rem;
     padding: 2.85714rem 2.5rem 2rem 2rem;
     border-radius: 0.35714rem;
     background-color: #202a3c; }
+  .review > :nth-child(3) {
+    margin: 0 4vh; }
   .review__img {
     width: 2rem;
     height: 2rem;
@@ -147,3 +162,119 @@ header {
     color: white; }
   .review__title {
     font-weight: 400; }
+  .review__bg-quotes-img {
+    position: absolute;
+    z-index: -1;
+    transform: translate(-16%, -80%); }
+
+/******************************************
+* Sign-up section
+*/
+.sign-up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-column: col-start 3 / col-end 10;
+  z-index: 1;
+  max-width: 57.85714rem;
+  margin-top: 10vh;
+  padding: 2.85714rem 0;
+  text-align: center;
+  background-color: #1c2431; }
+  .sign-up__sub-heading {
+    margin: 1.07143rem 0 1.42857rem 0;
+    padding: 0 10%; }
+  .sign-up__btn {
+    padding: 0.85714rem 2.14286rem;
+    margin-left: 3%;
+    outline: 0; }
+  .sign-up__input {
+    padding: 0 18%;
+    border-radius: 3.57143rem;
+    outline: 0; }
+
+/**********************************************
+* Footer section
+*/
+.footer-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  .footer-wrapper > * {
+    display: flex; }
+
+.footer {
+  grid-column: margin-start / margin-end;
+  justify-self: stretch;
+  padding: 10% 5% 3% 5%;
+  background-color: #0b1523; }
+  .footer__logo {
+    width: 6.78571rem;
+    margin-bottom: 5vh; }
+  .footer__heading {
+    max-width: 22.85714rem; }
+    .footer__heading > img {
+      padding: 0.35714rem 6% 0 0;
+      width: 1.07143rem;
+      height: 1.07143rem; }
+  .footer__contact-info {
+    flex-flow: column wrap; }
+    .footer__contact-info > * {
+      display: flex;
+      align-items: center; }
+    .footer__contact-info > :first-child {
+      margin-bottom: 0.71429rem; }
+    .footer__contact-info img {
+      width: 1.07143rem;
+      height: 1.07143rem;
+      margin-right: 1.42857rem; }
+  .footer__links1 {
+    flex-flow: column wrap; }
+    .footer__links1 > *:not(:last-child) {
+      margin-bottom: 0.71429rem; }
+  .footer__links2 {
+    flex-flow: column wrap; }
+    .footer__links2 > *:not(:last-child) {
+      margin-bottom: 0.71429rem; }
+  .footer__social-links svg {
+    fill: white; }
+  .footer__social-links svg:hover {
+    fill: #65e2d9; }
+  .footer__attribution {
+    margin-top: 5vh;
+    font-size: 0.78571rem;
+    text-align: center; }
+    .footer__attribution > a {
+      color: white; }
+    .footer__attribution > a:hover {
+      color: #65e2d9; }
+
+@media screen and (max-width: 59.125em) {
+  html {
+    font-size: 0.6875rem; }
+  .wrapper {
+    grid-template-columns: [margin-start] 1.42857rem [center-start] repeat(12, [col-start] 1fr [col-end]) [center-end] 1.42857rem [margin-end]; }
+  .stay-productive-img,
+  .stay-productive,
+  .sign-up {
+    grid-column: center-start / center-end; }
+  .stay-productive {
+    margin-left: 0; }
+    .stay-productive__heading {
+      padding: 0; }
+  .review {
+    justify-content: center; }
+    .review > *:not(:nth-child(2)) {
+      margin: 4vh 0 0 0; }
+    .review__bg-quotes-img {
+      transform: translate(-486%, -210%);
+      width: 2.14286rem; }
+  .sign-up__btn {
+    margin: 1.57143rem 0 0 0;
+    padding: 5% 21.5%; }
+  .sign-up__input {
+    padding: 5% 15%; }
+  .footer-wrapper {
+    flex-flow: column wrap; }
+    .footer-wrapper > :not(:last-child) {
+      margin-bottom: 3.57143rem; } }

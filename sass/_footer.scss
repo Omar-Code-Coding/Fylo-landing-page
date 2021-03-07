@@ -1,0 +1,137 @@
+/******************************************
+* Sign-up section
+*/
+.sign-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column: col-start 3 / col-end 10;
+    z-index: 1;
+    max-width: rem(810);
+    // height: 50%;
+    margin-top: 10vh;
+    padding: rem(40) 0;
+    text-align: center;
+    background-color: $color-primary-1;
+
+    // add spacing between sub-heading and input, button
+    &__sub-heading {
+        margin: rem(15) 0 rem(20) 0;
+        padding: 0 10%;
+    }
+
+    &__btn {
+        padding: rem(12) rem(30);
+        margin-left: 3%;
+        outline: 0;
+    }
+
+    &__input {
+        padding: 0 18%;
+        border-radius: rem(50);
+        outline: 0;
+    }
+}
+
+/**********************************************
+* Footer section
+*/
+.footer-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+    > * {
+        display: flex;
+    }
+}
+
+.footer {
+    grid-column: margin-start / margin-end;
+    justify-self: stretch;
+    padding: 10% 5% 3% 5%;
+    background-color: $color-primary-3;
+
+
+    &__logo {
+        width: rem(95);
+        margin-bottom: 5vh;
+    }
+
+    &__heading {
+        max-width: rem(320);
+
+        // location icon
+        > img {
+            padding: rem(5) 6% 0 0;
+            width: rem(15);
+            height: rem(15);
+        }
+    }
+
+    &__contact-info {
+        flex-flow: column wrap;
+        
+        // wrapper for contact info items
+        > *{
+            display: flex;
+            align-items: center;
+        }
+
+        > :first-child {
+            margin-bottom: rem(10);
+        }
+
+        // contact info icons
+        img {
+            width: rem(15);
+            height: rem(15);
+
+            // set a space between icons and text of contact info
+            margin-right: rem(20);
+        }
+    }
+
+    &__links1 {
+        flex-flow: column wrap;
+
+        // set a space between the links
+        > *:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__links2 {
+        flex-flow: column wrap;
+
+        // set a space between the links
+        > *:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__social-links {
+        // select the icons
+        svg {
+            fill: $color-neutral-1;
+        }
+
+        svg:hover {
+            fill: $color-secondary-1;
+        }
+    }
+
+    &__attribution {
+        margin-top: 5vh;
+        font-size: rem(11);
+        text-align: center;
+
+        > a {
+            color: $color-neutral-1;
+        }
+
+        > a:hover {
+            color: $color-secondary-1;
+        }
+    }
+}

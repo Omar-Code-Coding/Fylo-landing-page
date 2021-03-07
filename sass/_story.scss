@@ -1,13 +1,13 @@
 .stay-productive-img {
     width: 100%;
-    grid-column: center-start / col-end 4;
+    grid-column: center-start / col-end 6;
 }
 
 .stay-productive {
     display: flex;
     flex-direction: column;
     justify-content: center;  
-    grid-column: col-start 5 / center-end;
+    grid-column: col-start 7 / center-end;
 
     // To match up the design
     max-width: rem(500);
